@@ -1,3 +1,7 @@
+<script lang="ts">
+    let isShareOn: boolean = false;
+</script>
+
 <div id="profile">
     <div id="profile-photo">
         <img src="/assets/avatar-michelle.jpg" alt="Avatar" />
@@ -6,7 +10,12 @@
         <p>Michelle Appleton</p>
         <p>28 Jun 2020</p>
     </div>
-    <div id="profile-share">
+    <div
+        id="profile-share"
+        on:click={() => {
+            isShareOn = !isShareOn;
+        }}
+    >
         <img src="/assets/icon-share.svg" alt="Share Icon" />
     </div>
 </div>
@@ -43,5 +52,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
+        transition: filter 0.3s;
+    }
+    #profile-share:hover {
+        filter: invert();
     }
 </style>
