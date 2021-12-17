@@ -4,6 +4,5 @@
 
 <style>
     #left > img {
-        width: 100%;
     }
 </style>

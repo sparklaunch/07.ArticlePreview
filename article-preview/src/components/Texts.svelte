@@ -11,6 +11,9 @@
 </div>
 
 <style>
+    #texts {
+        margin-bottom: 20px;
+    }
     #texts > h1 {
         color: rgb(0, 0, 30);
         margin-bottom: 12px;
