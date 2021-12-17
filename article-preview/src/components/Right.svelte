@@ -10,7 +10,7 @@
 
 <style>
     #right {
-        padding: 30px;
+        padding: 40px;
         background-color: white;
     }
 </style>
