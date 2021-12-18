@@ -23,4 +23,9 @@
         justify-content: center;
         align-items: center;
     }
+    @media all and (max-width: 1440px) {
+        #app {
+            padding: 100px 0;
+        }
+    }
 </style>

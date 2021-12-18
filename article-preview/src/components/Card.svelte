@@ -16,4 +16,10 @@
         align-items: stretch;
         width: 60%;
     }
+    @media all and (max-width: 1440px) {
+        #card {
+            flex-direction: column;
+            width: 80%;
+        }
+    }
 </style>

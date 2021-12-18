@@ -47,7 +47,7 @@
     }
     #profile-share {
         margin-left: 20px;
-        width: 50px;
+        min-width: 50px;
         height: 50px;
         background-color: rgb(232, 238, 249);
         border-radius: 50%;
