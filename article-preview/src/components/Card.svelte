@@ -15,6 +15,5 @@
         display: flex;
         align-items: stretch;
         width: 60%;
-        overflow: hidden;
     }
 </style>

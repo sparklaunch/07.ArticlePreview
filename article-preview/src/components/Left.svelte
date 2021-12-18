@@ -5,6 +5,8 @@
 <style>
     #left {
         min-width: 350px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
         overflow: hidden;
     }
     #left > img {

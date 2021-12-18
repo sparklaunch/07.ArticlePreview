@@ -12,5 +12,7 @@
     #right {
         padding: 40px;
         background-color: white;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 </style>

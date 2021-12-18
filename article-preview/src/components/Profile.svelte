@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Popup from "./Popup.svelte";
     let isShareOn: boolean = false;
 </script>
 
@@ -12,11 +13,12 @@
     </div>
     <div
         id="profile-share"
-        on:click={() => {
+        on:click|self={() => {
             isShareOn = !isShareOn;
         }}
     >
         <img src="/assets/icon-share.svg" alt="Share Icon" />
+        <Popup {isShareOn} />
     </div>
 </div>
 
@@ -52,10 +54,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+
         cursor: pointer;
+    }
+    #profile-share > img {
         transition: filter 0.3s;
     }
-    #profile-share:hover {
+    #profile-share:hover > img {
         filter: invert();
     }
 </style>
