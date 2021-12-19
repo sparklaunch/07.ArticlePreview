@@ -4,6 +4,9 @@
     let isShareOn: boolean = true;
     $: innerWidth = 0;
     $: isMobile = innerWidth <= 1440;
+    const closePopup: () => void = () => {
+        isShareOn = false;
+    };
 </script>
 
 <svelte:window bind:innerWidth />
@@ -24,8 +27,8 @@
         <img src="/assets/icon-share.svg" alt="Share Icon" />
         <Popup {isShareOn} />
     </div>
-    {#if isMobile}
-        <MobilePopup />
+    {#if isMobile && isShareOn}
+        <MobilePopup on:closePopup={closePopup} />
     {/if}
 </div>
 

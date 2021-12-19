@@ -1,3 +1,11 @@
+<script lang="ts">
+    import { createEventDispatcher } from "svelte";
+    const dispatch = createEventDispatcher();
+    const clickedHandler: () => void = () => {
+        dispatch("closePopup");
+    };
+</script>
+
 <div id="mobile-popup">
     <div id="share-text">
         <p>SHARE</p>
@@ -7,7 +15,7 @@
         <img src="/assets/icon-twitter.svg" alt="Twitter Icon" />
         <img src="/assets/icon-pinterest.svg" alt="Pinterest Icon" />
     </div>
-    <div id="share-button">
+    <div id="share-button" on:click={clickedHandler}>
         <img src="/assets/icon-share.svg" alt="Share Icon" />
     </div>
 </div>
