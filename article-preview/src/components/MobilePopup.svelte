@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { slide } from "svelte/transition";
     import { createEventDispatcher } from "svelte";
     const dispatch = createEventDispatcher();
     const clickedHandler: () => void = () => {
@@ -6,7 +7,7 @@
     };
 </script>
 
-<div id="mobile-popup">
+<div id="mobile-popup" transition:slide>
     <div id="share-text">
         <p>SHARE</p>
     </div>

@@ -1,7 +1,7 @@
 <script lang="ts">
     import Popup from "./Popup.svelte";
     import MobilePopup from "./MobilePopup.svelte";
-    let isShareOn: boolean = true;
+    let isShareOn: boolean = false;
     $: innerWidth = 0;
     $: isMobile = innerWidth <= 1440;
     const closePopup: () => void = () => {
@@ -47,6 +47,8 @@
     }
     #profile-name {
         flex-grow: 1;
+        overflow: hidden;
+        white-space: nowrap;
     }
     #profile-name > p:first-child {
         font-weight: 700;
