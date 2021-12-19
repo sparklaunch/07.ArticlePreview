@@ -69,4 +69,9 @@
         opacity: 1 !important;
         visibility: visible !important;
     }
+    @media all and (max-width: 1440px) {
+        #popup {
+            display: none;
+        }
+    }
 </style>

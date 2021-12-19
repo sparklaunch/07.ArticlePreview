@@ -22,4 +22,9 @@
         color: rgb(0, 0, 30);
         line-height: 1.5;
     }
+    @media all and (max-width: 1440px) {
+        #texts {
+            margin-bottom: 40px;
+        }
+    }
 </style>

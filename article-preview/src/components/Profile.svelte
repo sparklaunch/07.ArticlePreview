@@ -1,8 +1,12 @@
 <script lang="ts">
     import Popup from "./Popup.svelte";
-    let isShareOn: boolean = false;
+    import MobilePopup from "./MobilePopup.svelte";
+    let isShareOn: boolean = true;
+    $: innerWidth = 0;
+    $: isMobile = innerWidth <= 1440;
 </script>
 
+<svelte:window bind:innerWidth />
 <div id="profile">
     <div id="profile-photo">
         <img src="/assets/avatar-michelle.jpg" alt="Avatar" />
@@ -20,12 +24,16 @@
         <img src="/assets/icon-share.svg" alt="Share Icon" />
         <Popup {isShareOn} />
     </div>
+    {#if isMobile}
+        <MobilePopup />
+    {/if}
 </div>
 
 <style>
     #profile {
         display: flex;
         align-items: center;
+        position: relative;
     }
     #profile-photo {
         margin-right: 20px;
@@ -55,7 +63,6 @@
         justify-content: center;
         align-items: center;
         position: relative;
-
         cursor: pointer;
     }
     #profile-share > img {
