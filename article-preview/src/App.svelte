@@ -15,12 +15,12 @@
         }
     </style>
 </svelte:head>
-<div id="app">
+<main>
     <Card />
-</div>
+</main>
 
 <style>
-    #app {
+    main {
         width: 100vw;
         height: 100vh;
         display: flex;
@@ -28,7 +28,7 @@
         align-items: center;
     }
     @media all and (max-width: 1440px) {
-        #app {
+        main {
             padding: 100px 0;
             display: block;
             height: auto;
